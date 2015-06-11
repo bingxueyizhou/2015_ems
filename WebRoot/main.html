@@ -1,0 +1,230 @@
+<!-- 
+author:zoubing
+date:2015/5/20
+ -->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>环境监测系统</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  <link rel="alternate icon" type="image/png" href="i/envicon.png">
+  <link rel="stylesheet" href="css/amazeui.min.css"/>
+  <style>
+    .get {
+      background: #1E5B94;
+      color: #fff;
+      text-align: center;
+      padding: 100px 0;
+    }
+
+    .get-title {
+      font-size: 200%;
+      border: 2px solid #fff;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .get-btn {
+      background: #fff;
+    }
+
+    .detail {
+      background: #fff;
+    }
+
+    .detail-h2 {
+      text-align: center;
+      font-size: 150%;
+      margin: 40px 0;
+    }
+
+    .detail-h3 {
+      color: #1f8dd6;
+    }
+
+    .detail-p {
+      color: #7f8c8d;
+    }
+
+    .detail-mb {
+      margin-bottom: 30px;
+    }
+
+    .hope {
+      background: #0bb59b;
+      padding: 50px 0;
+    }
+
+    .hope-img {
+      text-align: center;
+    }
+
+    .hope-hr {
+      border-color: #149C88;
+    }
+
+    .hope-title {
+      font-size: 140%;
+    }
+
+    .about {
+      background: #fff;
+      padding: 40px 0;
+      color: #7f8c8d;
+    }
+
+    .about-color {
+      color: #34495e;
+    }
+
+    .about-title {
+      font-size: 180%;
+      padding: 30px 0 50px 0;
+      text-align: center;
+    }
+    .footer p {
+      color: #7f8c8d;
+      margin: 0;
+      padding: 10px 0;
+      text-align: center;
+      background: #2d3e50;
+    }
+  </style>
+</head>
+<body>
+<header class="am-topbar am-topbar-fixed-top">
+  <div class="am-container">
+    <h1 class="am-topbar-brand">
+      <a href="#">XM17</a>
+    </h1>
+
+    <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-secondary am-show-sm-only"
+            data-am-collapse="{target: '#collapse-head'}"><span class="am-sr-only">导航切换</span> <span
+        class="am-icon-bars"></span></button>
+
+    <div class="am-collapse am-topbar-collapse" id="collapse-head">
+      <ul class="am-nav am-nav-pills am-topbar-nav">
+        <li class="am-active"><a href="">首页</a></li>
+        <!--<li><a href="#">项目</a></li>-->
+        <li class="am-dropdown" data-am-dropdown>
+          <a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+            功能 <span class="am-icon-caret-down"></span>
+          </a>
+          <ul class="am-dropdown-content">
+            <li class="am-dropdown-header">选项</li>
+            <li><a href="javascript:void(0)" onclick="toChart(event)">图表统计</a></li>
+            <li><a href="javascript:void(0)" onclick="toRealtime(event)">实时数据</a></li>
+            <li><a href="javascript:void(0)" onclick="toVideo(event)">视频监控</a></li>
+            <li><a href="javascript:void(0)" onclick="toVideoBack(event)">视频回放</a></li>
+            <li><a href="javascript:void(0)" onclick="toMapEmergent(event)">地点指引</a></li>
+          </ul>
+        </li>
+      </ul>
+	  
+	  
+      <div class="am-topbar-right">
+        <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm" onclick="toMgDevice(event)">
+        	<span class="am-icon-pencil"></span> 管理</button>
+      </div>
+      <div class="am-topbar-right">
+        <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="toAddDevice(event)">
+        	<span>+  </span>添加</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="get">
+  <div class="am-g">
+    <div class="am-u-lg-12">
+      <h1 class="get-title">XM17-环境监测系统</h1>
+
+      <p>
+        我们眼中最高大上的系统
+      </p>
+      <p>
+        <a href="./function/" class="am-btn am-btn-sm get-btn">开启EMS</a>
+        </br></br></br>
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="detail">
+  <div class="am-g am-container">
+    <div class="am-u-lg-12">
+      <h2 class="detail-h2"></h2>
+
+      <div>
+          <h4 class="about-color">关于我们</h4>
+
+          <p>XM17-环境监测小组，成立于2015年3月15日。为了应对中国日益恶化的环境，三个来自四川大学本科大二的二逼青年决定研制一套可以时刻记录环境质量的监控系统，以探取世界邪恶势力--pm2.5家族的重要情报信息，他们的伟大使命将带领人类进入一个零污染的时代。新时代即将到来，为了确保你能健康地迈入这个新时代，请记得每天登陆我们的网页：<a href="./" target="_blank">环境监测系统</a></p>
+          <h4 class="about-color">团队介绍</h4>
+
+          <p>XM17-环境监测小组，成立于2015年3月15日。面对日益恶化的自然环境，为了让人类免于宇宙异物——pm2.5的侵扰，三个来自于四川大学的逗比青年成立该组织，开启了他们的拯救人类之旅。</p>
+        </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>© 2015 <a herf="#">冰雪一舟</a> powered by <a href="http://amazeui.org/">AmazeUI team</a> and thank them
+  </p>
+</footer>
+
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="js/polyfill/rem.min.js"></script>
+<script src="js/polyfill/respond.min.js"></script>
+<script src="js/amazeui.legacy.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="js/jquery.min.js"></script>
+<script src="js/amazeui.min.js"></script>
+<script src="js/log.js"></script>
+<!--<![endif]-->
+<script type="text/javascript">
+record();
+function toChart(event){
+    window.location.href="./function/chart.jsp";
+}
+
+function toAddDevice(event){
+    window.location.href="./function/adddevice.jsp";
+}
+
+function toMgDevice(event){
+    window.location.href="./function/device.jsp";
+}
+
+
+function toMgEmergent(event){
+    window.location.href="./function/device.jsp";
+}
+
+function toVideo(event){
+    window.location.href="./function/video.jsp";
+}
+
+function toMapEmergent(event){
+    window.location.href="./function/maps.jsp";
+}
+
+function toVideoBack(event){
+    window.location.href="./function/huifang.jsp";
+}
+
+function toRealtime(event){
+    window.location.href="./function/realtime.jsp";
+}
+</script>
+</body>
+</html>
